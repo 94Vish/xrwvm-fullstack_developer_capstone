@@ -2,7 +2,7 @@
 import requests
 import os
 from dotenv import load_dotenv
-from .restapis import get_request, analyze_review_sentiments, post_review
+# from .restapis import get_request, analyze_review_sentiments, post_review
 
 load_dotenv()
 
@@ -30,6 +30,7 @@ def get_request(endpoint, **kwargs):
     except:
         # If any error occurs
         print("Network exception occurred")
+        return []
 
 # def analyze_review_sentiments(text):
 # request_url = sentiment_analyzer_url+"analyze/"+text

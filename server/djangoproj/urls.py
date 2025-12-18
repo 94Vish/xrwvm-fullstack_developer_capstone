@@ -28,4 +28,8 @@ urlpatterns = [
     path('login/', TemplateView.as_view(template_name="index.html")),
     path('register/', TemplateView.as_view(template_name="index.html")),
     path('dealers/', TemplateView.as_view(template_name="index.html")),
+    # Path for the individual Dealer page (where you are seeing the 404)
+    path('dealer/<int:dealer_id>', TemplateView.as_view(template_name="index.html")),
+    # Path for the Post Review page
+    path('postreview/<int:dealer_id>', TemplateView.as_view(template_name="index.html")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
